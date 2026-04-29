@@ -19,13 +19,6 @@ requirements.txt — Список внешних зависимостей Python
 
 ---
 
-## Требования
-
-- Docker
-- Docker Compose
-- Git с настроенным GPG для проверки подписей
-
----
 
 ## Запуск проекта
 
@@ -42,15 +35,6 @@ docker compose up -d --build
 ### 2. Сбор данных
 
 Запуск парсинга сайта Apache OpenOffice Security Bulletin и обогащения данных через API MITRE.
-
-На выходе будут созданы файлы:
-
-```text
-result_task_1.json
-result_task_2.json
-```
-
-Команда запуска:
 
 ```bash
 docker compose exec app python3 collector.py --task all
@@ -72,11 +56,6 @@ docker compose exec app python3 converter.py
 docker compose exec app python3 validate_task.py
 ```
 
-На выходе будет создан файл:
-
-```text
-result_task_3.xml
-```
 
 ---
 
@@ -129,5 +108,3 @@ result_task_1.json
 result_task_2.json
 result_task_3.xml
 ```
-
-Эти файлы являются результатами выполнения лабораторной работы и не выгружаются в репозиторий.
